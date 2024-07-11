@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html id="master" lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="Layout/Template/img/favicon.ico" />
+    <title>Senai</title>
+    <!-- Config -->
+    <script src="Layout/Template/js/main.js" defer></script>
+    <link rel="stylesheet" href="Layout/Template/css/theme.css">
+    <link rel="stylesheet" href="Layout/Template/css/style.css">
+    <link rel="stylesheet" href="Layout/Template/css/add-style.css">
+    <!-- JQuery-->
+    <script type="text/javascript" src="Layout/Template/bibliotecas/jQuery-3.6.3/jquery-3.6.3.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="Layout/Template/bibliotecas/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="Layout/Template/bibliotecas/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- UiKit-->
+    <link href="Layout/Template/bibliotecas/uikit/css/uikit.min.css" rel="stylesheet" />
+    <script src="Layout/Template/bibliotecas/uikit/js/uikit.min.js" async></script>
+    <script src="Layout/Template/bibliotecas/uikit/js/uikit-icons.min.js" async></script>
+    <!-- BoxIcons -->
+    <script src="Layout/Template/bibliotecas/boxicons/boxicons.js"></script>
+    <link href="Layout/Template/bibliotecas/boxicons/css/boxicons.min.css" rel='stylesheet'>
+    <!-- VIDEO DO YOUTUBE -->
+    <link href="Layout/Template/bibliotecas/youtube/css/youtube-chapters.min.css" rel="stylesheet" />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="Layout/Template/bibliotecas/fancybox/fancybox.css">
+</head>
+
+<body>
+    <header>
+        <div id="google_translate_element"></div>
+        <!-- Vlibras -->
+        <div vw class="enabled">
+            <div id="vlibras-show" vw-access-button class="#"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <!-- Menu -->
+        <nav class="navbar-dark bg-dark fixed-top nav-height">
+            <div class="d-flex bd-highlight align-items-center g-2 nav-height">
+                <div class="bd-highlight">
+                    <button class="btn  align-items-center ms-2" data-bs-toggle="offcanvas"
+                        data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" aria-describedby="Menu"
+                        tabindex="0">
+                        <i class='cor1 bx bx-menu bx-tada-hover'></i>
+                    </button>
+                </div>
+                <div class="bd-highlight mx-auto">
+                    <object class="d-none d-lg-block img-fluid" style="margin-left:105px; max-width:180px"
+                        data="Layout/Template/img/logo_senai.svg" type="image/svg+xml" aria-labelledby="SENAI"
+                        title="some stuff that could be useful"></object>
+                    <object class="d-md-block d-lg-none" style="margin-top: 5px;max-width: 130px;"
+                        data="Layout/Template/img/logo_senai.svg" type="image/svg+xml" aria-labelledby="SENAI"
+                        title="some stuff that could be useful"></object>
+                </div>
+                <div class="bd-highlight">
+                    <div class="d-flex bd-highlight align-items-center nav-height">
+                        <div class="form-check form-check-inline switch-group">
+                            <input class="form-check-input d-none" type="checkbox" name="themeBtns" id="themeSwitcher">
+                            <label class="form-check-label" for="themeSwitcher" tabindex="0" aria-labelledby="Tema"
+                                title="Tema">
+                                <div class="switch-darkmode">
+                                    <div class="icons">
+                                        <i class='bx bx-moon bx-tada-hover'></i>
+                                        <i class='bx bx-sun bx-spin-hover'></i>
+                                    </div>
+                                    <div class="circle"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class=" d-flex flex-row align-middle ms-2 me-2" onclick="vlibrashow()">
+                            <i class='vlibras-show bx bx-universal-access' style="font-size:2rem" title="Libras"></i>
+                            <span class="ms-1 me-1 d-none d-lg-block menu" style="margin-top: 3px;"></span>
+                        </div>
+                        <div class="dropdown ">
+                            <button class="btn text-white" type="button" id="Acessibilidade" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-labelledby="Configuração" title="Configuração">
+                                <div class="pt-1">
+                                    <i class='bx bx-cog bx-spin-hover bx-sm' title="Configuração"></i>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark menu-margin" aria-labelledby="Acessibilidade">
+                                <li class="dropdown-item">
+                                    <strong>Acessibilidade</strong>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="mb-3 form-check form-switch">
+                                            <input class="form-check-input " type="checkbox" name="themeBtns"
+                                                id="graySwitcher">
+                                            <label class="form-check-label menu" for="graySwitcher"
+                                                aria-labelledby="Monocromatico">Modo Monocromatico</label>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="mb-3 form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" name="themeBtns"
+                                                id="daltonicSwitcher">
+                                            <label class="form-check-label menu" for="daltonicSwitcher"
+                                                aria-labelledby="Daltonico">Modo Daltônico</label>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-item">
+                                    <span class="menu" data-translate="tamanho-da-fonte">Tamanho da Fonte</span>
+                                    <br>
+                                    <input type="range" class="form-range" min="50" max="115" step="5" id="size">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="true" data-bs-backdrop="static" tabindex="-1"
+                id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header bg-dark">
+                    <p class="offcanvas-title copyright" id="staticBackdropLabel">Menu</p>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close" aria-labelledby="close">
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <h3>
+                        <a href="../../index.html">
+                            <i class="bi bi-house"></i>
+                            Inicio
+                        </a>
+                    </h3>
+
+                    <!-- Menu -->
+                    <nav id="navbar-menu" class="flex-column align-items-stretch pe-4 my-5">
+                        <nav class="nav nav-pills flex-column">
+                            <ul uk-accordion>
+                                <!-- 1 -->
+                                <li class="uk-open">
+                                    <a class="nav-link uk-accordion-title">
+                                        <i class=" bx  bi-code-slash bx-tada"></i>
+                                        Origami: Uma Jornada Dobrada Através da História, Cultura e Arte
+                                    </a>
+                                    <div class="uk-accordion-content">
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#jornada">1. Uma Jornada Dobrada Através da História, Cultura e Arte</a>
+                                            <a class="nav-link ms-3 my-1" href="#dobradura">1.1. Uma dobradura no tempo</a>
+                                            <a class="nav-link ms-3 my-1" href="#tecnica">1.2. Técnicas e modelos</a>
+                                            <a class="nav-link ms-3 my-1" href="#saiba-mais">Saiba Mais!</a>
+                                            <a class="nav-link ms-3 my-1" href="#questao-1">Questão número 1</a>
+                                            <a class="nav-link ms-3 my-1" href="#origami">1.3. Origami na educação</a>
+                                            <a class="nav-link ms-3 my-1" href="#questao-2">Questão número 2</a>
+                                            <a class="nav-link ms-3 my-1" href="#video">Vídeo</a>
+                                            <a class="nav-link ms-3 my-1" href="#questao-3">Questão número 3</a>
+                                            <a class="nav-link ms-3 my-1" href="#recapitulando">2.0. Recapitulando</a>
+                                            <a class="nav-link ms-3 my-1" href="#referencia">2.1. Referências</a>
+                                        </nav>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-offset="0">
+        <!-- Capa -->
+        <div class="d-flex py-5 min-vh-100 flex-column justify-content-center uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('Layout/Template/img/capa.png');">
+            <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                <div class="row m-2">
+                    <h1 class="text-white text-uppercase"
+                        uk-parallax="opacity: 1; y: -0,0; scale: 1.1,2; end: 0vh + 10%;">
+                        Origami: Uma Jornada Dobrada Através da História, Cultura e Arte
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <section class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex"
+            style="background: linear-gradient(90deg, var(--color1), var(--color2));background-size: 400% 400%;
+                                                                     animation: gradient 25s ease infinite;height:auto">
+            <br>
+        </section>
+        <section class="container">
+            <article class="py-5">
+                <div class="nav-link ms-3 my-1">
+                    <h1>1. Origami: Uma Jornada Dobrada Através da História, Cultura e Arte</h1>
+                </div>
+                <div>
+                    <p>O origami, a arte milenar de dobrar papel, transcendendo culturas e inspirando criatividade,
+                        nos convida a uma viagem fascinante por suas origens, técnicas e simbolismos. Através de dobras 
+                        precisas e gestos meditativos, transformamos simples folhas em obras de arte complexas e carregadas 
+                        de significado. Prepare-se para desvendar um universo rico em tradições, belezas e infinitas possibilidades.</p>
+                </div>
+                <div>
+                    <h3>1.1. Uma dobradura no tempo</h3>
+                       <p class="dobradura">As origens do origami se entrelaçam com a história do papel, um invento revolucionário que possibilitou
+                         a comunicação e o registro de informações. Evidências arqueológicas sugerem que a prática de dobrar papel
+                         remonta à China do século II d.C., onde eram utilizadas para fins religiosos e cerimoniais. O papel, 
+                         introduzido no Japão no século VI, impulsionou o desenvolvimento do origami, tornando-o um passatempo popular
+                         entre a corte imperial e a elite samurai.
+                    </p>
+                </div>
+                <div class="banner-origami">
+                    <img src="Layout/Template/img/banner.png" alt="Na imagem está composta uma linha do tempo da evolução do Origami que remonta desde VII até os dias atuais.">
+                </div>
+                <div>
+                    <p>Ao longo dos séculos, o origami evoluiu, incorporando influências de diversas culturas e crenças. No período Edo
+                        (1603-1867), o origami se popularizou entre o povo, com a criação de modelos mais elaborados e complexos. A crença
+                        de que dobrar mil tsurus (garças de papel) traria boa sorte e saúde contribuiu para a disseminação da arte.</p>
+                </div>
+                <div class="tecnica">
+                    <h3>1.2. Técnicas e modelos</h3>
+                    <p>O origami se baseia em dobras precisas e sequenciais, transformando uma folha plana em uma escultura tridimensional.
+                        As técnicas básicas, como dobras simples, inversas e em acordeão, combinadas de maneiras criativas, dão vida a uma
+                        infinidade de modelos. Entre os mais tradicionais, encontramos o tsuru, símbolo de paz e esperança, a flor de lótus,
+                        representando pureza e iluminação, e o sapo, associado à fortuna e prosperidade.</p>
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto py-5">
+                                <div class="box saibamais">
+                                    <div class="d-flex justify-content-center d-sm-none mx-auto">
+                                        <i class="bx bi bi bi-search verde-saibamais bx-tada"></i>
+                                    </div>
+                                    <div class="d-flex  align-items-center container">
+                                        <div class="col-lg-10 p-2">
+                                            <div class="row">
+                                                <h3 class="saiba-mais">Saiba mais...</h3>
+                                                <p>
+                                                    Você sabe como surgiu o tsuru? Conheça mais sobre sua história acessando o link:
+                                                    <p>
+                                                        <a href="https://pt.wikipedia.org/wiki/Tsuru_(origâmi)">Tsuru</a>.
+                                                      </p>
+                                                    </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ">
+                                            <div class="d-flex d-none d-sm-block d-md-block d-lg-block">
+                                                <i class="bx bi bi bi-search verde-saibamais bx-tada"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <p>O origami transcende a mera manipulação do papel, tornando-se uma forma de arte expressiva e meditativa.
+                            Através das dobras, conectamo-nos com nossa criatividade, desenvolvendo habilidades motoras finas, 
+                            coordenação mão-olho e raciocínio espacial. A prática do origami também promove a paciência, a concentração
+                            e o foco, proporcionando um momento de relaxamento e bem-estar.
+                        </p>
+                        <div class="row py-3">
+                            <div class="col-lg-10 mx-auto py-5 border rounded">
+                                <div class="p-3 gy-4">
+                                    <p class="questao-1"><strong>1.</strong> É correto afirmar que a arte do Origami nasceu na Espanha?
+                                    </p>
+                                </div>
+                                <div class="gy-4">
+                                    <div class="row" id="verdadeiro">
+                                        <div class="d-grid gap-2 col-md-3 mx-auto p-3 ">
+                                            <button id="verdadeiro" class="uk-button uk-button-default py-2"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse-tf-ex1-1"
+                                                aria-expanded="verdadeiro" aria-controls="collapse-tf-ex1-1"
+                                                onclick="verdadeiro();"><span>Verdadeira</span></button>
+                                        </div>
+                                        <div class="d-grid gap-2 col-md-3 mx-auto p-3">
+                                            <button id="falso" class="uk-button uk-button-default py-2"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse-tf-ex1-2"
+                                                aria-expanded="false" aria-controls="collapse-tf-ex1-2"
+                                                onclick="falso();"><span>Falsa</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse mt-20" id="collapse-tf-ex1-1">
+                                    <div class="card mt-20 shadow">
+                                        <div class="card-header">
+                                            <div class="card-title d-inline-flex align-baseline">
+                                                <i class="bi bi-check-circle"></i><span class="ms-1">
+                                                    Resposta
+                                                    incorreta.</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body   p-3">
+                                            <p>
+                                                Você não selecionou a alternativa correta, pois... 
+A arte do Origami nasceu na China do século II d.C.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse mt-20" id="collapse-tf-ex1-2">
+                                    <div class="card mt-20 shadow">
+                                        <div class="card-header">
+                                            <div class="card-title d-inline-flex align-baseline">
+                                                <i class="bi bi-x-circle"></i> <span class="ms-1">Parabéns! Resposta
+                                                    correta.</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-3">
+                                            <p>
+                                                Isso mesmo! Você selecionou a alternativa correta, pois... A arte do 
+                                                Origami nasceu na China do século II d.C.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                 <div class="educacao">
+                    <h3>1.3. Origami na educação</h3>
+                    <p>O origami se destaca como ferramenta poderosa na educação, estimulando o aprendizado de matemática,
+                        geometria, artes e cultura. Acompanhe a seguir alguns usos dessa técnica:
+                    </p>
+                    <div class="accordion accordion-flush py-2" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Na sala de aula
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Professores utilizam modelos de origami para ensinar conceitos abstratos
+                                        de forma lúdica e interativa, promovendo a resolução de problemas e o pensamento crítico.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Em pesquisas
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Cientificamente, os princípios do origami inspiram o desenvolvimento de estruturas complexas
+                                        e materiais inovadores, com aplicações em engenharia, arquitetura e design.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                      <div class="row py-3">
+                        <div class="col-lg-10 mx-auto py-5 border rounded">
+                            <div class="p-3 gy-4">
+                                <p class="questao-2"><strong>2.</strong> O Origami estimula a criatividade? 
+                                </p>
+                            </div>
+                            <div class="gy-4">
+                                <div class="row" id="verdadeiro">
+                                    <div class="d-grid gap-2 col-md-3 mx-auto p-3 ">
+                                        <button id="verdadeiro" class="uk-button uk-button-default py-2"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse-tf-ex1-1"
+                                            aria-expanded="verdadeiro" aria-controls="collapse-tf-ex1-1"
+                                            onclick="verdadeiro();"><span>Verdadeira</span></button>
+                                    </div>
+                                    <div class="d-grid gap-2 col-md-3 mx-auto p-3">
+                                        <button id="falso" class="uk-button uk-button-default py-2"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse-tf-ex1-2"
+                                            aria-expanded="false" aria-controls="collapse-tf-ex1-2"
+                                            onclick="falso();"><span>Falsa</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse mt-20" id="collapse-tf-ex1-1">
+                                <div class="card mt-20 shadow">
+                                    <div class="card-header">
+                                        <div class="card-title d-inline-flex align-baseline">
+                                            <i class="bi bi-check-circle"></i><span class="ms-1">Parabéns!
+                                                Resposta
+                                                correta.</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body   p-3">
+                                        <p>
+                                            Isso mesmo! Você selecionou a alternativa correta, pois... 
+                                            O origami se destaca como ferramenta poderosa na educação, 
+                                            estimulando o aprendizado de matemática, geometria, artes e cultura.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse mt-20" id="collapse-tf-ex1-2">
+                                <div class="card mt-20 shadow">
+                                    <div class="card-header">
+                                        <div class="card-title d-inline-flex align-baseline">
+                                            <i class="bi bi-x-circle"></i> <span class="ms-1">Resposta
+                                                incorreta.</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-3">
+                                        <p>
+                                            Você não selecionou a alternativa correta, pois... 
+                                            O origami se destaca como ferramenta poderosa na 
+                                            educação, estimulando o aprendizado de matemática, 
+                                            geometria, artes e cultura.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>A beleza do origami reside na simplicidade de seus materiais e na acessibilidade 
+                        da técnica. Tudo que você precisa para começar é uma folha de papel e um pouco 
+                        de paciência. Diversos livros, sites e tutoriais online oferecem instruções passo 
+                        a passo para a criação de diversos modelos, desde os mais simples até os mais elaborados. 
+                    </p>
+                    <p>Clique em play no vídeo a seguir e acompanhe um exemplo.</p>
+                    </div>
+                    <div class="row pb-5">
+                        <div class="col-lg-6">
+                            <div class="ratio ratio-16x9 ">
+                                <iframe width="1920" height="1080" src="https://www.youtube.com/embed/LDN5_wx_Fsk" 
+                                title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                            </div>
+    
+                        </div>
+                       <!-- <div class="col-lg-6">
+                            <video class="rounded" src="#" controlslist="nodownload" controls>
+                            </video>
+                        </div><!---->
+                    </div>
+    
+                    <div class="row py-3">
+                        <div class="col-lg-10 mx-auto py-5 border rounded">
+                            <div class="m-3">
+                                <p class="questao-3"><strong>3.</strong>  Qual formato de origami mais popular?
+                                </p>
+                            </div>
+                            <div class="row m-2">
+                                <div class="list-group-checkable d-grid gap-2" id="alternativas-escolha-unica-1">
+                                    <input class="list-group-item-check pe-none" type="radio" name="list-unica-escolha-1"
+                                        id="exercicio-escolha-unica-1" data-exercicio1="1" data-alternativa1="a">
+                                    <label class="list-group-item  border rounded-3 py-3" for="exercicio-escolha-unica-1">
+                                        <div class="row">
+                                            <p class="my-n1"> A)  Avião de papel
+                                            </p>
+                                        </div>
+                                    </label>
+                                    <input class="list-group-item-check pe-none " type="radio" name="list-unica-escolha-1"
+                                    id="exercicio-escolha-unica-5" data-exercicio1="1" data-alternativa1="e">
+                                <label class="list-group-item border rounded-3 py-3" for="exercicio-escolha-unica-5">
+                                    <div class="row">
+                                        <p class="my-n1"> B) Cisne
+                                        </p>
+                                    </div>
+                                </label>
+                                    <input class="list-group-item-check pe-none " type="radio" name="list-unica-escolha-1"
+                                        id="exercicio-escolha-unica-3" data-exercicio1="1" data-alternativa1="c">
+                                    <label class="list-group-item border rounded-3 py-3" for="exercicio-escolha-unica-3">
+                                        <div class="row">
+                                            <p class="my-n1">C) Megazord 
+                                            </p>
+                                        </div>
+                                    </label>
+                                   
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="collapse" id="collapse-ex1-1">
+                                    <!-- mudar o ID de acordo com a questão para não dar conflito pois é identificação para chamar o feedback -->
+                                    <div class="card border shadow">
+                                        <div class="card-header">
+                                            <div class="card-title d-inline-flex align-baseline"><i
+                                                    class="bi bi-check-circle"></i><span class="ms-1">Parabéns!
+                                                    Resposta
+                                                    correta.</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-3">
+                                            <p>
+                                                Isso mesmo! Você selecionou a alternativa correta...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- collapsed de resposta incorreta 1 -->
+                                <div class="collapse" id="collapse-ex1-2">
+                                    <div class="card border  shadow">
+                                        <div class="card-header">
+                                            <div class="card-title d-inline-flex align-baseline"><i
+                                                    class="bi bi-exclamation-circle"></i>
+                                                <span class="ms-1">Ops!
+                                                    Tente
+                                                    novamente.</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-3 text-black-75">
+                                            <p>
+                                                Você não selecionou a alternativa correta. Tente outra vez.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- collapsed de resposta incorreta 2 -->
+                                <div class="collapse" id="collapse-ex1-3">
+                                    <div class="card border shadow">
+                                        <div class="card-header">
+                                            <div class="card-title d-inline-flex align-baseline"><i
+                                                    class="bi bi-x-circle"></i>
+                                                <span class="ms-1">Resposta
+                                                    incorreta.</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body p-3">
+                                            <p>
+                                                Alternativa B. É a resposta correta. Volte e revise o conteúdo novamente.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div> 
+                  <div>
+                    <h2 class="Recapitulando">2.0 Recapitulando</h2>
+                    <p>O origami é uma arte milenar que continua a encantar e inspirar pessoas em todo o mundo. Sua simplicidade
+                        e versatilidade a tornam acessível a todos, proporcionando uma experiência criativa e gratificante. </p>
+                        <p>Se você ainda não experimentou o origami, que tal se aventurar nesse mundo mágico de dobras e
+                            descobrir o poder transformador dessa arte ancestral?</p>
+                            <h3>Dicas para Começar:</h3>
+                            <ul>
+                                <li>Escolha um modelo simples para iniciantes.</li>
+                                <li>Utilize papel de boa qualidade para facilitar as dobras.</li>
+                                <li>Siga as instruções passo a passo com atenção e cuidado.</li>
+                                <li>Não desanime se não conseguir na primeira tentativa.</li>
+                                <li>Pratique regularmente para melhorar suas habilidades.</li>
+                                <li>Divirta-se e explore sua criatividade!</li>
+                            </ul>
+                  </div>     
+                  <h3 class="#referencia">2.1. Referências</h3>
+                  <p>Breve histórico do origami no brasil. Kamiarte. Disponível em: <a href="http://www.kamiarte.com.br/breve_historico2.htm" target="_blank" rel="noopener noreferrer"></a> Acesso em: 08 Julho. 2024. </p>
+                  <p>KANEGAE, Mari. Origami: Arte e Técnica da dobradura de Papel. 1º Edição. Aliança Cultural Brasil-Japão, 1 de Janeiro de 1990.</p>
+                </div>
+                <div><p></p></div>
+                </div>
+            </article>
+            <!---->
+ 
+
+    </main>
+    <footer class="border-top fixed-bottom bg-dark">
+        <div class="progress_section">
+            <div class="progress_bar_wrap">
+                <div class="progress_bar"></div>
+            </div>
+            <div class="progress_num">
+            </div>
+        </div>
+        <div class="d-flex justify-content-evenly  align-items-center  justify-content-center">
+            <div class="col-sm-12 d-flex  justify-content-center">
+
+                <p class="mx-auto mt-4 copyright">© Senai <span class="copyright" id="year"></span></p>
+
+            </div>
+            <div><p></p></div>
+        </div>
+  
+    </footer>
+
+
+    <script>
+        window.addEventListener('load', () => {
+            const date = new Date()
+            document.querySelector('#year').textContent = `${date.getFullYear()}`
+        })
+    </script>
+</body>
+<script src="Layout/Template/bibliotecas/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+<script src="Layout/Template/bibliotecas/youtube/js/youtube-chapters.min.js"></script>
+<script src="Layout/Template/js/exercicios.js"></script>
+<script src="Layout/Template/js/youtube.js"></script>
+<script src="Layout/Template/bibliotecas/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind('[data-fancybox="zoom"]', {
+    });
+</script>
+
+</html>
